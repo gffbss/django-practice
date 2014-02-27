@@ -14,4 +14,11 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+    url(r'^movies/$', 'hollywood.views.movies', name='movies'),
+    url(r'^movies/new/$', 'hollywood.views.new_movie', name='new_movie'),
+    url(r'^movies/(?P<movie_id>\w+)/$', 'hollywood.views.view_movie', name='view_movie'),
+    url(r'^movies/(?P<movie_id>\w+)/edit$', 'hollywood.views.edit_movie', name='edit_movie'),
+    url(r'^movies/(?P<movie_id>\w+)/delete', 'hollywood.views.delete_movie', name='delete_movie'),
+
+
 )

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Movie</title>
+</head>
+<body>
+    <h1>View Movie</h1>
+    {{ movie.name }} - {{ movie.release_year }}
+    <br>
+    <a href="{% url "edit_movie" movie.id %}">Edit Movie</a>
+    <br>
+    <a href="{% url "movies" %}">Back To Movies</a>
+    <br>
+    <br>
+    <a href="{% url "delete_movie" movie.id %}">Delete Movie</a>
+
+</body>
+</html>
